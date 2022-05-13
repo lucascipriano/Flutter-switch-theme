@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:randomproject/components/header.dart';
-import 'package:randomproject/controllers/app_controler.dart';
+import 'package:randomproject/switch_theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Header(),
+              BalanceUser(),
             ],
           ),
         ),

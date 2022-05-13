@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:randomproject/controllers/app_controler.dart';
 import 'package:randomproject/pages/home_page.dart';
@@ -7,6 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_equal_for_default_values
@@ -17,10 +21,10 @@ class MyApp extends StatelessWidget {
           title: 'Switch Theme Example',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-              primarySwatch: Colors.blue,
               brightness: AppController.instance.isDarkTheme
                   ? Brightness.dark
                   : Brightness.light),
+          // ignore: prefer_const_constructors
           home: HomePage(),
         );
       },
