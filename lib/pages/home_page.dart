@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:randomproject/components/header.dart';
 import 'package:randomproject/controllers/app_controler.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,26 +15,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Switch theme example"),
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                setState(
-                  () {
-                    isSelected = !isSelected;
-                    AppController.instance.changeTheme();
-                  },
-                );
-              },
-              icon: Container(
-                child: isSelected == false
-                    ? Icon(Icons.light_mode)
-                    : Icon(Icons.dark_mode),
-              ))
-        ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Header(),
+            ],
+          ),
+        ),
       ),
-      body: Center(),
     );
   }
 }
