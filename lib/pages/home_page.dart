@@ -9,18 +9,31 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Switch(
-          value: AppController.instance.isDartTheme,
-          onChanged: (value) {
-            AppController.instance.changeTheme();
-          },
-        ),
+      appBar: AppBar(
+        title: const Text("App bolado"),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {
+                setState(
+                  () {
+                    isSelected = !isSelected;
+                    AppController.instance.changeTheme();
+                  },
+                );
+              },
+              icon: Container(
+                child: isSelected == false
+                    ? Icon(Icons.light_mode)
+                    : Icon(Icons.dark_mode),
+              ))
+        ],
       ),
+      body: Center(),
     );
   }
 }
