@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("App bolado"),
+        title: const Text("Switch theme example"),
         actions: <Widget>[
           IconButton(
               onPressed: () {

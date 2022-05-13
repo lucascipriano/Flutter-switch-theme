@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
       animation: AppController.instance,
       builder: (context, child) {
         return MaterialApp(
-          title: 'test',
+          title: 'Switch Theme Example',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
               primarySwatch: Colors.blue,
-              brightness: AppController.instance.isDartTheme
+              brightness: AppController.instance.isDarkTheme
                   ? Brightness.dark
                   : Brightness.light),
           home: HomePage(),

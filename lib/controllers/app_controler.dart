@@ -2,9 +2,9 @@ import 'package:flutter/foundation.dart';
 
 class AppController extends ChangeNotifier {
   static AppController instance = AppController();
-  bool isDartTheme = false;
+  bool isDarkTheme = false;
   changeTheme() {
-    isDartTheme = !isDartTheme;
+    isDarkTheme = !isDarkTheme;
     notifyListeners();
   }
 }
