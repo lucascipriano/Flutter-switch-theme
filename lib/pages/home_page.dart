@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:randomproject/components/cards.dart';
 import 'package:randomproject/components/header.dart';
 import 'package:randomproject/switch_theme.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Header(),
               BalanceUser(),
+              Cards(),
             ],
           ),
         ),

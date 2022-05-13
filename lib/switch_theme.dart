@@ -99,57 +99,57 @@ class BalanceUser extends StatefulWidget {
 class _BalanceUserState extends State<BalanceUser> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 10),
-      child: Container(
-        height: MediaQuery.of(context).size.height / 5,
-        width: MediaQuery.of(context).size.height / 2.3,
-        decoration: BoxDecoration(
-          color: Colors.black45,
-          borderRadius: BorderRadius.all(
-            Radius.circular(30),
-          ),
+    return Container(
+      height: 56,
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.only(left: 16),
+      decoration: BoxDecoration(
+        // color: Colors.black45,
+        borderRadius: BorderRadius.all(
+          Radius.circular(30),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 50),
-              child: Text(
-                "YOU BALANCE",
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20,
-                ),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 0),
+            child: Text(
+              "Balance",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.grey[400],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  "\$14,358.44",
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                "\$14,358.44",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.green[500],
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.green[500],
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  alignment: Alignment.center,
-                  height: 30,
-                  width: 60,
-                  child: Text("22.22%"),
-                )
-              ],
-            ),
-          ],
-        ),
+                alignment: Alignment.center,
+                height: 30,
+                width: 60,
+                margin: EdgeInsets.only(left: 16),
+                child: Text("22.22%"),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
