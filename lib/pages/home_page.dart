@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:randomproject/components/cards.dart';
+import 'package:randomproject/components/dots.dart';
 import 'package:randomproject/components/header.dart';
 import 'package:randomproject/switch_theme.dart';
 

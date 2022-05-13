@@ -154,3 +154,56 @@ class _BalanceUserState extends State<BalanceUser> {
     );
   }
 }
+
+class Dots extends StatelessWidget {
+  final int currentIndex;
+  Color getColor(int index) {
+    if (index == currentIndex && isSelected == true) {
+      return Colors.white;
+    }
+    if (index != currentIndex && isSelected == true) {
+      return Colors.grey;
+    }
+    if (index == currentIndex && isSelected != true) {
+      return Colors.black;
+    }
+    return Colors.grey;
+  }
+
+  const Dots({Key? key, required this.currentIndex}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          height: 7,
+          width: 7,
+          decoration: BoxDecoration(
+            color: getColor(0),
+            shape: BoxShape.circle,
+          ),
+        ),
+        SizedBox(width: 8),
+        Container(
+          height: 7,
+          width: 7,
+          decoration: BoxDecoration(
+            color: getColor(1),
+            shape: BoxShape.circle,
+          ),
+        ),
+        SizedBox(width: 8),
+        Container(
+          height: 7,
+          width: 7,
+          decoration: BoxDecoration(
+            color: getColor(2),
+            shape: BoxShape.circle,
+          ),
+        ),
+      ],
+    );
+  }
+}

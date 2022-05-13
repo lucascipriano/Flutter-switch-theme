@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
 import 'package:randomproject/controllers/app_controler.dart';
+import 'package:randomproject/controllers/card_index.dart';
 import 'package:randomproject/pages/home_page.dart';
 
 void main() {
@@ -28,7 +31,9 @@ class MyApp extends StatelessWidget {
                   ? Brightness.dark
                   : Brightness.light),
           // ignore: prefer_const_constructors
-          home: HomePage(),
+          home: ChangeNotifierProvider(
+              child: HomePage(),
+              create: (BuildContext context) => PageControllerApp()),
         );
       },
     );
